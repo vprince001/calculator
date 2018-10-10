@@ -1,31 +1,13 @@
 let lib = require('../library/lib_calc.js');
 
 const chooseOperation = function(operation,firstNumber,secondNumber){
-  let message = "";
-  if(operation == "add"){
-    message = lib.add(firstNumber,secondNumber);
-    message = firstNumber+"+"+secondNumber+" = "+message;
-    return message;
-
-  }
-  if(operation == "sub"){
-    message = lib.sub(firstNumber,secondNumber);
-    message = firstNumber+"-"+secondNumber+" = "+message;
-    return message;
-  }
-  if(operation == "multiply"){
-    message = lib.multiply(firstNumber,secondNumber);
-    message = firstNumber+"X"+secondNumber+" = "+message;
-    return message;
-  }
-  if(operation == "divide"){
-    let result = lib.divide(firstNumber,secondNumber);
-    message = result.toFixed(2); 
-    message = firstNumber+"/"+secondNumber+" = "+message;
-    return message;
-  }
-  message = "Operation not found";
-  return message;
+  let operations=[];
+  operations['add']=lib.add(firstNumber,secondNumber);
+  operations['sub']=lib.sub(firstNumber,secondNumber);
+  operations['multiply']=lib.multiply(firstNumber,secondNumber);
+  operations['divide']=(lib.divide(firstNumber,secondNumber)).toFixed(2);
+  let result = operations[operation];
+  return result;
 }
 
 const main = function(){
