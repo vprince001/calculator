@@ -6,6 +6,7 @@ const chooseOperation = function(firstNumber,operator,secondNumber){
   operations['-'] = lib.sub(firstNumber,secondNumber);
   operations['x'] = lib.multiply(firstNumber,secondNumber);
   operations['/'] = (lib.divide(firstNumber,secondNumber)).toFixed(2);
+  operations['%'] = lib.mod(firstNumber,secondNumber);
   let result = operations[operator];
   return result;
 }
