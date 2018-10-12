@@ -2,7 +2,7 @@ let add = function(a,b){
   return a+b;
 };
 
-let sub = function(a,b){
+let subtract = function(a,b){
   return a-b;
 };
 
@@ -19,7 +19,7 @@ let mod = function(a,b){
 };
 
 exports.add = add;
-exports.sub = sub;
+exports.subtract = subtract;
 exports.multiply = multiply; 
 exports.divide = divide;
 exports.mod = mod;

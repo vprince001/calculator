@@ -1,9 +1,9 @@
-let lib = require('../library/lib_calc.js');
+let lib = require('../library/calc_lib.js');
 
 const chooseOperation = function(firstNumber,operator,secondNumber){
   const operations={};
   operations['+'] = lib.add(firstNumber,secondNumber);
-  operations['-'] = lib.sub(firstNumber,secondNumber);
+  operations['-'] = lib.subtract(firstNumber,secondNumber);
   operations['x'] = lib.multiply(firstNumber,secondNumber);
   operations['/'] = (lib.divide(firstNumber,secondNumber)).toFixed(2);
   operations['%'] = lib.mod(firstNumber,secondNumber);
