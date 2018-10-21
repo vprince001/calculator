@@ -1,4 +1,4 @@
-let lib = require('../library/calc_lib.js');
+let lib = require('./src/calc_lib.js');
 
 const chooseOperation = function(firstNumber,operator,secondNumber){
   const operations={};

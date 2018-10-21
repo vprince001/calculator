@@ -1,5 +1,5 @@
 const assert = require("assert");
-const calc_lib = require("../library/calc_lib");
+const calc_lib = require("../src/calc_lib");
 
 assert.equal(calc_lib.add(1,2),3);
 assert.equal(calc_lib.multiply(0,1),0);
