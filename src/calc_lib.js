@@ -20,11 +20,11 @@ let mod = function(a,b){
 
 const chooseOperation = function(firstNumber,operator,secondNumber){
   const operations={};
-  operations['+'] = lib.add(firstNumber,secondNumber);
-  operations['-'] = lib.subtract(firstNumber,secondNumber);
-  operations['x'] = lib.multiply(firstNumber,secondNumber);
-  operations['/'] = (lib.divide(firstNumber,secondNumber)).toFixed(2);
-  operations['%'] = lib.mod(firstNumber,secondNumber);
+  operations['+'] = add(firstNumber,secondNumber);
+  operations['-'] = subtract(firstNumber,secondNumber);
+  operations['x'] = multiply(firstNumber,secondNumber);
+  operations['/'] = (divide(firstNumber,secondNumber)).toFixed(2);
+  operations['%'] = mod(firstNumber,secondNumber);
   let result = operations[operator];
   return result;
 }
